@@ -58,18 +58,18 @@ body {
   transition: 0.5s;
 }
 
-.card:hover img {
+/* .card:hover img {
   opacity: 0.4;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
+} */
+/* 
 .card:hover .testimonial {
   -webkit-transform: translateY(-100px);
   transform: translateY(-100px);
   -webkit-transition: all 0.9s;
   transition: all 0.9s;
-}
+} */
 
 .card:hover li:nth-child(1) a {
   -webkit-transition-delay: 0.1s;
@@ -95,16 +95,18 @@ body {
 .carousel .slick-next {
   width: 50px;
   height: 50px;
-  background-color: #fff;
+  color: green;
+  outline: none;
+  background: gray;
 }
 
 .carousel .slick-prev:hover,
 .carousel .slick-prev:focus,
 .carousel .slick-next:hover,
 .carousel .slick-next:focus {
-  color: #fff;
+  color: green;
   outline: none;
-  background: #fff;
+  background: gray;
 }
 
 .carousel .slick-prev:before,
@@ -121,3 +123,38 @@ body {
   left: -55px;
 }
 /*# sourceMappingURL=App.css.map */
+.arrow {
+  /* background-color: #fff; */
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+  width: 44px;
+  height: 81px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 144px;
+  line-height: 171px;
+  display: flex;
+  align-items: center;
+  color: #00a449;
+  /* transform: rotate(-180deg); */
+}
+
+.arrow svg {
+  transition: color 300ms;
+}
+
+.arrow svg:hover {
+  color: #68edff;
+}
+
+.next {
+  right: 80px;
+  top: 40%;
+}
+
+.prev {
+  left: -15px;
+  top: 40%;
+}

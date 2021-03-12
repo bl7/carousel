@@ -4,10 +4,29 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import TestimonialData from './TestimonalData';
+import { RightOutlined, LeftOutlined } from '@ant-design/icons';
+
 function ImageSlider() {
+  const NextArrow = ({ onClick }) => {
+    return (
+      <div className="arrow next" onClick={onClick}>
+        <RightOutlined />
+      </div>
+    );
+  };
+
+  const PrevArrow = ({ onClick }) => {
+    return (
+      <div className="arrow prev" onClick={onClick}>
+        <LeftOutlined />
+      </div>
+    );
+  };
   const [divIndex, setDivIndex] = useState(0);
 
   let settings = {
+    autoplay: true,
+    autoplaySpeed: 3000,
     infinite: true,
     lazyLoad: true,
     speed: 300,
@@ -15,6 +34,8 @@ function ImageSlider() {
     centerMode: true,
     centerPadding: 0,
     // cssEase: 'linear',
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
     beforeChange: (current, next) => setDivIndex(next),
   };
   return (
@@ -53,8 +74,3 @@ function ImageSlider() {
 }
 
 export default ImageSlider;
-
-//... is called spread operator
-
-//thanks for watching
-//pleae subscribe my channel
